@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy Birthday Zimal ❤️</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #ff758c, #ff7eb3);
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      text-align: center;
+      overflow: hidden;
+    }
+    .card {
+      background: rgba(255,255,255,0.15);
+      padding: 35px;
+      border-radius: 22px;
+      max-width: 540px;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+      backdrop-filter: blur(10px);
+    }
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 5px;
+    }
+    h2 {
+      font-weight: normal;
+      margin-bottom: 20px;
+      opacity: 0.95;
+    }
+    p {
+      line-height: 1.7;
+      font-size: 1.1em;
+      min-height: 80px;
+    }
+    .heart {
+      font-size: 3em;
+      animation: pulse 1.5s infinite;
+      margin-bottom: 10px;
+    }
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.25); }
+      100% { transform: scale(1); }
+    }
+    footer {
+      margin-top: 25px;
+      font-style: italic;
+      font-size: 1.1em;
+      opacity: 0.95;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Background Music -->
+  <audio autoplay loop>
+    <source src="https://files.catbox.moe/9p0l8g.mp3" type="audio/mpeg">
+  </audio>
+
+  <div class="card">
+    <div class="heart">❤️</div>
+
+    <h1>Happy Birthday, Zimal</h1>
+    <h2>22 December</h2>
+
+    <p id="typeText"></p>
+
+    <footer>
+      Forever yours,<br>
+      <strong>Baqir</strong> ❤️
+    </footer>
+  </div>
+
+  <script>
+    const text = `
+Zimal, today is not just your birthday — it’s the day my world became more beautiful.
+
+You are my happiness, my peace, and the smile I never want to lose.
+Every moment with you means more to me than words can explain.
+
+May all your dreams come true, may your heart always stay happy,
+and may our love grow stronger with every passing day.
+    `;
+
+    let i = 0;
+    function typeEffect() {
+      if (i < text.length) {
+        document.getElementById("typeText").innerHTML += text.charAt(i);
+        i++;
+        setTimeout(typeEffect, 35);
+      }
+    }
+    typeEffect();
+  </script>
+
+</body>
+</html>
